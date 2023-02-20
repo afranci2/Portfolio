@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        burtons: "burtons",
-        poppins: ["Poppins", "sans-serif"],
+        'sans': ['Mona Sans'],
+        'serif': ['Goldenbook'],
+        'poppins': ['Poppins']
+
       },
     },
   },
