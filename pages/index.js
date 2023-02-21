@@ -33,7 +33,7 @@ export default function Home() {
       <main className=" bg-white px-10 dark:bg-black md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-          <Image className="" src={web7} width={50} height={50} alt="wef" />
+          <Image className="" src={web7} width={45} height={45} alt="wef" />
 
             <ul className="flex items-center">
               <li>
@@ -53,7 +53,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-center p-10 py-10">
-            <h2 className="text-7xl font-serif font-bold py-2 text-red-700 dark:text-teal-400 md:text-6xl">
+            <h2 className="text-5xl font-bold py-2 text-red-700 dark:text-teal-400 md:text-6xl">
               Anthony Francisco            </h2>
             <h3 className="text-xl py-2 dark:text-white md:text-3xl">
               Developer and designer.
@@ -145,7 +145,7 @@ export default function Home() {
               developer, I've done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
+              and collaborated with talanted peopl to create digital products
               for both business and consumer use.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
