@@ -15,6 +15,7 @@ import web4 from "../public/web4.png";
 import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
 import web7 from "../public/My project-1 (11) (1).png";
+import Card from './Card'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -167,39 +168,13 @@ export default function Home() {
               programming and teaching.
             </p>
           </div>
-          <div className={`transition-all duration-500 flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap`}>
-            <div
-              className="transition-all duration-500 delay-150 basis-1/3 flex-1 relative"
-              onMouseEnter={() => setShowDetails(true)}
-              onMouseLeave={() => setShowDetails(false)}
-              onClick={toggleDetails}
-            >
-              {showDetails && (
-                <div className="card transition-all duration-500 cursor-pointer text-white rounded-lg bg-black/50 w-full h-full absolute justify-center align-center flex flex-col z-50 text-center">
-                  <h2 className="font-sembibold text-4xl">Monte Sinai</h2>
-                  <p className="pt-4">A full stack web app for visitors. Complete with front-end and back-end. HTTP requests</p>
-                  <div className="px-6 py-2 ">
-                  <button
-                    className=" text-sm font-semibold  text-red-800 rounded-lg"
-                    onClick={toggleDetails}
-                  >
-                    IN PROGRESS
-                  </button>
-                  </div>
-                  <p className="font-bold text-sm py-6">Click to learn more</p>
+          
+          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
 
-                </div>
-      
-              )}
-              <Image
-                className={`rounded-lg object-cover ${showDetails ? 'blur-sm': ''}`}
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                src={web1}
-                alt="Wef"
-              />
-            </div>
+            <Card image={web1} title="MonteSinai" description="wefWEF" />
+            <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
+            <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
+            <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
 
           </div>
         </section>
