@@ -16,6 +16,7 @@ import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
 import web7 from "../public/My project-1 (11) (1).png";
 import Card from './Card'
+import DarkLogo from '../public/darklogo.png'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -35,7 +36,7 @@ export default function Home() {
       <main className=" bg-white px-10 dark:bg-black md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <Image className="" src={web7} width={45} height={45} alt="wef" />
+            <Image className="" src={darkMode ? DarkLogo : web7} width={45} height={45} alt="wef" />
 
             <ul className="flex items-center">
               <li>
@@ -47,7 +48,7 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-red-800 text- to-red-700 text-white px-4 py-2 border-none rounded-md ml-8 dark:bg-gradient-to-r dark:from-cyan-500 text- dark:to-teal-500"
-                  href="#"
+                  href="https://otherstuffassets.s3.amazonaws.com/Resume.pdf"
                 >
                   Resume
                 </a>
@@ -77,7 +78,7 @@ export default function Home() {
                 <AiFillGithub />
               </a>
             </div>
-            <div className="mx-auto bg-gradient-to-b from-red-700 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+            <div className="mx-auto bg-gradient-to-b from-red-700 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96 dark:bg-gradient-to-b dark:to-teal-200 dark:from-teal-500">
               <Image src={deved} layout="fill" objectFit="cover" alt="Wef" />
             </div>
           </div>
@@ -107,7 +108,7 @@ export default function Home() {
                 Creating elegant designs suited for your needs following core
                 design theory.
               </p>
-              <h4 className="py-4 text-red-700 font-medium">Languages I Use</h4>
+              <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Languages I Use</h4>
               <p className="text-gray-800 py-1">Javascript</p>
               <p className="text-gray-800 py-1">HTML/CSS</p>
               <p className="text-gray-800 py-1">TypeScript</p>
@@ -123,12 +124,12 @@ export default function Home() {
                 reality.
               </p>
               <div>
-                <h4 className="py-4 text-red-700 font-medium">Front End</h4>
+                <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Front End</h4>
                 <p className="text-gray-800 py-1">React.js</p>
                 <p className="text-gray-800 py-1">Tailwind</p>
                 <p className="text-gray-800 py-1">Bootstrap</p>
                 <div>
-                  <h4 className="py-4 pt-8 text-red-700 font-medium">
+                  <h4 className="py-4 pt-8 text-red-700 font-medium dark:text-teal-400">
                     Back End
                   </h4>
                   <p className="text-gray-800 py-1">Node.js</p>
@@ -146,7 +147,7 @@ export default function Home() {
                 Are you interested in feedback for your current project? I can
                 give you tips and tricks to level it up.
               </p>
-              <h4 className="py-4 text-red-700 font-medium">Tools I Use</h4>
+              <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Tools I Use</h4>
               <p className="text-gray-800 py-1">AWS</p>
               <p className="text-gray-800 py-1">Git</p>
               <p className="text-gray-800 py-1">Adobe Suite</p>
@@ -168,10 +169,15 @@ export default function Home() {
               programming and teaching.
             </p>
           </div>
-          
+
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
 
-            <Card image={web1} title="MonteSinai" description="wefWEF" />
+            <Card image={web1} title="MonteSinai" shortdescription="Website for non profit religious organizations for visitors to
+                  track different churches around the globe" description="Website for non profit religious organizations for visitors to
+                  track different churches around the globe, learn about the
+                  organization, watch sermons and live streams, donate, and
+                  more. Made in React with Tailwind and Node and Express and
+                  Next js. Link to project: www.elmontesinai.org" link="www.elmontesinai.org" link2="www.github.com/afranci2/monteweb" features="Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard" />
             <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
             <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
             <Card image={web1} title="gwrggwergwerg" description="wefWEF" />

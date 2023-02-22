@@ -24,32 +24,48 @@ const Card = (props) => {
   }
 
   return (
-    <div className="transition ease-in-out basis-1/3 flex-1 relative">
+    <div className="rounded-lg transition ease-in-out basis-1/3 flex-1 relative">
       {" "}
       {click && (
-        <div className="overflow-auto shadow-2xl rounded-lg bg-black/90 w-10/12 h-5/6 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="border-2  overflow-auto shadow-2xl rounded-lg bg-white/100 w-10/12 h-5/6 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="flex space-between">
-            <div className="p-12 flex space-between content text-white">
+            <div className="py-14 px-16 md:flex space-between content text-black">
               {" "}
               <div className="basis-1/3 flex-1 text pr-10">
                 <p className="font-bold text-4xl">Monte Sinai</p>
                 <p className="font-regular pt-1">Full Stack</p>
                 <p className="font-regular text-xs text-red-500">IN PROGRESS</p>
-                <p className="font-regular text-sm py-6">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quisquam beatae aspernatur tenetur natus non assumenda sed
-                  modi itaque nam accusamus dignissimos, praesentium eveniet
-                  vero aperiam atque odio optio ratione magnam.
+
+                <p className="font-regular text-sm py-4">{props.description}</p>
+                <p className="font-bold text-sm text-teal-00 pt-4">
+                  Link to project
                 </p>
-                <p className="font-regular text-sm">
+                <a href={`https://${props.link}`} target={"_blank"}>
+                  <p className="font-semibold text-sm pt-1">Live Site: </p>
+
+                  <p className="font-regular text-sm underline">{props.link}</p>
+                </a>
+
+                <a href={`https://${props.link2}`} target={"_blank"}>
+                  <p className="font-semibold text-sm pt-4">Github Repo: </p>
+
+                  <p className="font-regular text-sm underline">
+                    {props.link2}
+                  </p>
+                </a>
+
+                <p className="font-bold text-sm text-teal-400  pt-4">
                   Features
                 </p>
-                <p className="font-regular text-sm">
-                  Stack
+                <p className="font-regular text-sm">{props.features}</p>
+
+                <p className="font-bold text-sm text-teal-400  pt-4">Stack</p>
+                <p className="font-regular text-sm">{props.stack}</p>
+
+                <p className="font-bold text-sm text-teal-400  pt-4">
+                  Optimizations
                 </p>
-                <p className="font-regular text-sm">
-                  Stack
-                </p>
+                <p className="font-regular text-sm">{props.optimizations}</p>
               </div>
               <div className="basis-1/3 flex-1 picture">
                 <Image
@@ -62,8 +78,12 @@ const Card = (props) => {
                 />
               </div>
             </div>
-            <div className="button absolute right-0 p-4">
-              <AiFillCloseCircle color={"fff"}size={27} onClick={clickHandler2} />
+            <div className="button absolute right-0 p-5">
+              <AiFillCloseCircle
+                color={"000"}
+                size={27}
+                onClick={clickHandler2}
+              />
             </div>
           </div>
         </div>
@@ -72,27 +92,29 @@ const Card = (props) => {
         onMouseEnter={() => setShowDetails(true)}
         onMouseLeave={() => setShowDetails(false)}
         onClick={clickHandler}
+        className="rounded-lg overflow-hidden "
       >
         {showDetails && (
-          <div className="">
-            <div className=" card cursor-pointer text-white rounded-lg bg-black/50 w-full h-full absolute justify-center align-center flex flex-col z-40 text-center">
-              <h2 className="font-sembibold text-4xl">{props.title}</h2>
-              <p className="pt-4">{props.description}</p>
-              <div className="px-6 py-2 ">
+          <div className="rounded-lg">
+            <div className="px-8 card cursor-pointer text-white rounded-lg bg-black/40 w-full h-full absolute justify-center align-center flex flex-col z-40 text-center">
+              <h2 className="rounded-lg font-bold text-4xl">{props.title}</h2>
                 <button
-                  className=" text-sm font-semibold  text-red-800 rounded-lg"
+                  className="py-1 text-sm font-bold text-teal-400 rounded-lg"
                   onClick={toggleDetails}
                 >
                   IN PROGRESS
                 </button>
-              </div>
-              <p className="font-bold text-sm py-6">Click to learn more</p>
+              <p className="py-4">{props.shortdescription}</p>
+
+              <p className="font-bold text-sm pt-4 rounded-lg">
+                Click to learn more
+              </p>
             </div>
           </div>
         )}
         <Image
           className={`rounded-lg object-cover ${
-            showDetails ? "transition ease-in-out  blur-sm" : ""
+            showDetails ? "transition ease-in-out  blur-md" : ""
           }`}
           width={"100%"}
           height={"100%"}
