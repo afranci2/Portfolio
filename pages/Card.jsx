@@ -40,13 +40,13 @@ const Card = (props) => {
                 <p className="font-bold text-sm text-teal-00 pt-4">
                   Link to project
                 </p>
-                <a href={`https://${props.link}`} target={"_blank"}>
+                <a href={`https://${props.link}`}>
                   <p className="font-semibold text-sm pt-1">Live Site: </p>
 
                   <p className="font-regular text-sm underline">{props.link}</p>
                 </a>
 
-                <a href={`https://${props.link2}`} target={"_blank"}>
+                <a href={`https://${props.link2}`}>
                   <p className="font-semibold text-sm pt-4">Github Repo: </p>
 
                   <p className="font-regular text-sm underline">
