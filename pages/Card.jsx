@@ -36,9 +36,9 @@ const Card = (props) => {
       {click && (
         <div className="border-2  overflow-auto shadow-2xl rounded-lg bg-white/100 w-11/12 h-5/6 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-8/12">
           <div className="flex space-between">
-            <div className="mr-8 w-10/12 py-12 m-auto md:flex md:py-14 md:px-16 md:ml-0 md:w-auto space-between content text-black">
+            <div className=" w-10/12 py-12 m-auto lg:flex md:py-14 md:px-16 md:ml-0 md:w-auto space-between content text-black">
               {" "}
-              <div className="basis-1/3 flex-1 text pr-10">
+              <div className="w-1/2 break-words  basis-1/3 flex-1 text pr-20">
                 <p className="font-bold text-4xl">{props.title}</p>
                 <p className="font-regular pt-1">{props.shortstack}</p>
                 <p className="font-regular text-xs text-red-500">
@@ -78,9 +78,9 @@ const Card = (props) => {
                   {props.optimizations}
                 </p>
               </div>
-              <div className="cursor-pointer basis-1/3 h-full flex-1">
+              <div className=" cursor-pointer overflow-hidden rounded-lg mb-6 basis-1/3 h-full flex-1">
                 {props.video && (
-                  <div>
+                  <div className="overflow-hidden rounded-lg mb-6">
                     {" "}
                     <video
                       loop
@@ -95,7 +95,7 @@ const Card = (props) => {
                   return (
                     <a href={image.src} target={"_blank"}>
                       <img
-                        className={`shadow-md border-2 h-full my-6 rounded-lg object-cover ${
+                        className={`shadow-md border-2 h-full mb-6 rounded-lg object-cover ${
                           showDetails2 ? "transition ease-in-out  blur-md" : ""
                         }`}
                         src={image.src}
@@ -132,8 +132,7 @@ const Card = (props) => {
               >
                 {props.progress}
               </button>
-              <p className="py-4">{props.shortdescription}</p>
-
+              <p className="w-5/6 mx-auto p-4">{props.shortDescription}</p>
               <p className="font-bold text-sm pt-4 rounded-lg">
                 Click to learn more
               </p>

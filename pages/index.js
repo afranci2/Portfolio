@@ -22,6 +22,17 @@ import MonteImage2 from '../public/monte2.png'
 import MonteImage3 from '../public/monte3.png'
 import PixelBloom1 from '../public/pixelbloom1.png'
 import PixelBloom2 from '../public/pixelbloom2.png'
+import PixelBloom3 from '../public/pixelbloom3.png'
+import PixelBloom4 from '../public/pixelbloom4.png'
+
+import CreateMyEssay1 from '../public/createmyessay1.png'
+import CreateMyEssay2 from '../public/createmyessay2.png'
+import CreateMyEssay3 from '../public/createmyessay3.png'
+import CreateMyEssay4 from '../public/createmyessay4.png'
+import RoseInABottle1 from '../public/roseinabottle1.png'
+import RoseInABottle2 from '../public/roseinabottle2.png'
+
+
 
 const Rose = "https://monte-assets.s3.amazonaws.com/video/Screen_Recording_2023-02-06_at_12_51_03_PM_AdobeExpress.mp4"
 
@@ -48,20 +59,6 @@ export default function Home() {
       shortstack:"Full Stack"
     },
     {
-      title: "Pixel-Bloom",
-      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
-      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link:"www.pixel-bloom.com",
-      link2:"www.github.com/afranci2/pixelbloom",
-      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
-      stack: "Front End:wf",
-      optimizations: "Wefwef",
-      images:[PixelBloom1, PixelBloom2],
-      progress: "COMPLETED",
-      shortstack:"Front-End/Full"
-
-    },
-    {
       title: "CreateMyEssay",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
@@ -70,12 +67,26 @@ export default function Home() {
       features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images:[MonteImage1,MonteImage2,MonteImage3],
+      images:[CreateMyEssay1, CreateMyEssay2, CreateMyEssay3, CreateMyEssay4],
       progress: "COMPLETED",
       shortstack:"Full Stack",
     },
     {
-      title: "Rose-In-A-Bottle",
+      title: "PixelBloom",
+      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
+      link:"www.pixel-bloom.com",
+      link2:"www.github.com/afranci2/pixelbloom",
+      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      stack: "Front End:wf",
+      optimizations: "Wefwef",
+      images:[PixelBloom1, PixelBloom2, PixelBloom3, PixelBloom4],
+      progress: "COMPLETED",
+      shortstack:"Front-End/Full"
+
+    },
+    {
+      title: "RoseInABottle",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
       link:"www.github.com/afranci2/monteweb",
@@ -83,7 +94,7 @@ export default function Home() {
       features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images:[MonteImage1,MonteImage2,MonteImage3],
+      images:[RoseInABottle1,RoseInABottle2],
       progress: "COMPLETED",
       shortstack:"Full Stack",
       video:Rose
@@ -251,7 +262,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             {PortfolioAssets.map((project)=>{
-              return (<Card video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={MonteImage1} images={project.images} link={project.link} link2={project.link2} description={project.description} shortDescription={project.shortDescription} features={project.features} stack={project.stack}></Card>)
+              return (<Card shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={MonteImage1} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
             })}
           </div>
         </section>
