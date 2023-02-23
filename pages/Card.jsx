@@ -27,9 +27,9 @@ const Card = (props) => {
     <div className="rounded-lg transition ease-in-out basis-1/3 flex-1 relative">
       {" "}
       {click && (
-        <div className="border-2  overflow-auto shadow-2xl rounded-lg bg-white/100 w-10/12 h-5/6 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="border-2  overflow-auto shadow-2xl rounded-lg bg-white/100 w-11/12 h-5/6 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="flex space-between">
-            <div className="py-14 px-16 md:flex space-between content text-black">
+            <div className="mr-4 w-10/12 py-12 m-auto md:flex md:py-14 md:px-16 md:ml-0 md:w-auto space-between content text-black">
               {" "}
               <div className="basis-1/3 flex-1 text pr-10">
                 <p className="font-bold text-4xl">Monte Sinai</p>
