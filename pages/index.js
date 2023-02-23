@@ -78,6 +78,7 @@ export default function Home() {
 
   const PortfolioAssets = [
     {
+      id:0,
       title: "Monte Sinai",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "This website is for a non profit religious organization with locations around the globe. It allows visitors to find different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
@@ -91,6 +92,7 @@ export default function Home() {
       shortstack: "Full Stack"
     },
     {
+      id:1,
       title: "CreateMyEssay",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
@@ -103,7 +105,8 @@ export default function Home() {
       progress: "COMPLETED",
       shortstack: "Full Stack",
     },
-    {
+    {      
+      id:2,
       title: "PixelBloom",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
@@ -118,6 +121,7 @@ export default function Home() {
 
     },
     {
+      id:3,
       title: "RoseInABottle",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
@@ -132,6 +136,7 @@ export default function Home() {
       video: Rose
     },
     {
+      id:4,
       title: "Medical Preparatory Academy of Rhode Island",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
@@ -293,8 +298,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            {PortfolioAssets.map((project) => {
-              return (<Card shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={MonteImage1} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
+            {PortfolioAssets.map((project,index) => {
+              return (<Card key={project.id} shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={MonteImage1} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
             })}
           </div>
         </section>
@@ -319,7 +324,7 @@ export default function Home() {
               <form className="flex flex-col p-8 gap-6" onSubmit={handleSubmit}>
 
                 <div className="flex gap-2 flex-col">
-                  <label className="" for="name">Name</label>
+                  <label className="" htmlFor="name">Name</label>
                   <input value={formState.name}
                     onChange={(e) =>
                       setFormState({
@@ -329,7 +334,7 @@ export default function Home() {
                     } className="bg-slate-100 rounded-lg h-12 p-4" type="text" id="name" name="name" placeholder="Name" required="" />
                 </div>
                 <div className="flex gap-2 flex-col">
-                  <label className="" for="email">Email</label>
+                  <label className="" htmlFor="email">Email</label>
                   <input value={formState.email}
                     onChange={(e) =>
                       setFormState({
@@ -339,7 +344,7 @@ export default function Home() {
                     } className="bg-slate-100 rounded-lg h-12 p-4" type="text" id="email" name="email" placeholder="Email" required="" />
                 </div>
                 <div className="flex gap-2 flex-col">
-                  <label className="" for="message">Message</label>
+                  <label className="" htmlFor="message">Message</label>
                   <textarea
                     className="bg-slate-100 rounded-lg p-4 h-52"
                     id="message"

@@ -91,9 +91,9 @@ const Card = (props) => {
                     />{" "}
                   </div>
                 )}
-                {props.images.map((image) => {
+                {props.images.map((image, index) => {
                   return (
-                    <a href={image.src} target={"_blank"}>
+                    <a href={image.src} target="_blank" key={index}>
                       <img
                         className={`shadow-md border-2 h-full mb-6 rounded-lg object-cover ${
                           showDetails2 ? "transition ease-in-out  blur-md" : ""
