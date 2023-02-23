@@ -1,19 +1,13 @@
 import Head from "next/head";
-import Link from "next/link";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub, AiFillCloseCircle } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { useState } from "react";
+import { IoIosSend } from 'react-icons/io'
+import React, { useState, FormEvent } from "react";
 import deved from "../public/som11.png";
 import code from "../public/cube.png";
 import design from "../public/cube2.png";
 import consulting from "../public/tool.png";
 import Image from "next/image";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
 import web7 from "../public/My project-1 (11) (1).png";
 import Card from './Card'
 import DarkLogo from '../public/darklogo.png'
@@ -31,87 +25,125 @@ import CreateMyEssay3 from '../public/createmyessay3.png'
 import CreateMyEssay4 from '../public/createmyessay4.png'
 import RoseInABottle1 from '../public/roseinabottle1.png'
 import RoseInABottle2 from '../public/roseinabottle2.png'
-
-
-
 const Rose = "https://monte-assets.s3.amazonaws.com/video/Screen_Recording_2023-02-06_at_12_51_03_PM_AdobeExpress.mp4"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
+  const [submit, setSubmit] = useState(false)
+  const initialFormState = {
+    email: '',
+    name: '',
+    message: '',
+  }
 
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
-  };
+  const [formState, setFormState] = useState(initialFormState)
+  const [formSuccess, setFormSuccess] = useState(false)
+
+  const formId = 'BOFOAxmD'
+  const formSparkUrl = `https://submit-form.com/${formId}`
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSubmit(true)
+    const payload = {
+      name: formState.name,
+      email: formState.email,
+      message: formState.message
+    }
+
+    try {
+      const response = await fetch(formSparkUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(
+          payload,
+        ),
+      })
+      console.log(response)
+      setFormSuccess(true)
+      setSubmit(false)
+      setTimeout(() => {
+        setFormSuccess(false);
+      }, 10000)
+
+    }
+    catch (error) {
+      console.log(error)
+    }
+  }
+
 
   const PortfolioAssets = [
     {
       title: "Monte Sinai",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "This website is for a non profit religious organization with locations around the globe. It allows visitors to find different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link:"www.elmontesinai.org",
-      link2:"www.github.com/afranci2/monteweb",
-      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      link: "www.elmontesinai.org",
+      link2: "www.github.com/afranci2/monteweb",
+      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Client: HTML, CSS, Javascript, TypeScript, React, NextJS, TailwindCSS, POSTCSS Javascript, Node, Express",
       optimizations: "Animations: add animation similar to https://www.revolut.com/en-US/ when hovering over cards",
-      images:[MonteImage1,MonteImage2,MonteImage3],
-      progress:"IN PROGRESS",
-      shortstack:"Full Stack"
+      images: [MonteImage1, MonteImage2, MonteImage3],
+      progress: "IN PROGRESS",
+      shortstack: "Full Stack"
     },
     {
       title: "CreateMyEssay",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link:"www.github.com/afranci2/monteweb",
-      link2:"www.elmontesinai.org",
-      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      link: "www.github.com/afranci2/monteweb",
+      link2: "www.elmontesinai.org",
+      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images:[CreateMyEssay1, CreateMyEssay2, CreateMyEssay3, CreateMyEssay4],
+      images: [CreateMyEssay1, CreateMyEssay2, CreateMyEssay3, CreateMyEssay4],
       progress: "COMPLETED",
-      shortstack:"Full Stack",
+      shortstack: "Full Stack",
     },
     {
       title: "PixelBloom",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link:"www.pixel-bloom.com",
-      link2:"www.github.com/afranci2/pixelbloom",
-      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      link: "www.pixel-bloom.com",
+      link2: "www.github.com/afranci2/pixelbloom",
+      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images:[PixelBloom1, PixelBloom2, PixelBloom3, PixelBloom4],
+      images: [PixelBloom1, PixelBloom2, PixelBloom3, PixelBloom4],
       progress: "COMPLETED",
-      shortstack:"Front-End/Full"
+      shortstack: "Front-End/Full"
 
     },
     {
       title: "RoseInABottle",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link:"www.github.com/afranci2/monteweb",
-      link2:"www.elmontesinai.org",
-      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      link: "www.github.com/afranci2/monteweb",
+      link2: "www.elmontesinai.org",
+      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images:[RoseInABottle1,RoseInABottle2],
+      images: [RoseInABottle1, RoseInABottle2],
       progress: "COMPLETED",
-      shortstack:"Full Stack",
-      video:Rose
+      shortstack: "Full Stack",
+      video: Rose
     },
     {
       title: "Medical Preparatory Academy of Rhode Island",
       shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link:"www.github.com/afranci2/monteweb",
-      link2:"www.elmontesinai.org",
-      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      link: "www.github.com/afranci2/monteweb",
+      link2: "www.elmontesinai.org",
+      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images:[MonteImage1,MonteImage2,MonteImage3],
+      images: [MonteImage1, MonteImage2, MonteImage3],
       progress: "COMING SOON",
-      shortstack:"Full Stack",
-      video:Rose
+      shortstack: "Full Stack",
+      video: Rose
     },
 
   ]
@@ -261,9 +293,71 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            {PortfolioAssets.map((project)=>{
+            {PortfolioAssets.map((project) => {
               return (<Card shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={MonteImage1} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
             })}
+          </div>
+        </section>
+        <section className="h-40 w-full">
+          <div className="w-10/12 m-auto border-2 py-12 p-4 shadow-2xl rounded-lg">
+            <div className="pb-8 flex gap-2 align-center m-auto justify-center">
+              <IoIosSend size={30} />
+              <h1 className=" font-bold text-2xl">
+                Contact Me!
+              </h1>
+            </div>
+            <div className="m-auto bg-gradient-to-b from-red-700 rounded-full w-40 h-40 relative overflow-hidde md:h-46 md:w-46 dark:bg-gradient-to-b dark:to-teal-200 dark:from-teal-500">
+              <Image src={deved} layout="fill" objectFit="cover" alt="Wef" />
+            </div>
+            {
+              formSuccess && (<div className="transition ease-in flex justify-between align-center m-auto p-4 mx-8 mt-8 rounded-lg bg-green-500">
+                <p>Message sent!</p>
+                <AiFillCloseCircle onClick={() => setFormSuccess(false)} size={20} className="align-center cursor-pointer my-auto" />
+              </div>)
+            }
+            <div className="flex flex-col">
+              <form className="flex flex-col p-8 gap-6" onSubmit={handleSubmit}>
+
+                <div className="flex gap-2 flex-col">
+                  <label className="" for="name">Name</label>
+                  <input value={formState.name}
+                    onChange={(e) =>
+                      setFormState({
+                        ...formState,
+                        name: e.target.value,
+                      })
+                    } className="bg-slate-100 rounded-lg h-12 p-4" type="text" id="name" name="name" placeholder="Name" required="" />
+                </div>
+                <div className="flex gap-2 flex-col">
+                  <label className="" for="email">Email</label>
+                  <input value={formState.email}
+                    onChange={(e) =>
+                      setFormState({
+                        ...formState,
+                        email: e.target.value,
+                      })
+                    } className="bg-slate-100 rounded-lg h-12 p-4" type="text" id="email" name="email" placeholder="Email" required="" />
+                </div>
+                <div className="flex gap-2 flex-col">
+                  <label className="" for="message">Message</label>
+                  <textarea
+                    className="bg-slate-100 rounded-lg p-4 h-52"
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required=""
+                    value={formState.message}
+                    onChange={(e) =>
+                      setFormState({
+                        ...formState,
+                        message: e.target.value,
+                      })
+                    }
+                  ></textarea>                </div>
+
+                <button type="submit" className="font-medium bg-red-700 transition-colors duration-200 justify-center shadow-lg rounded-lg my-2 text-white w-7/12 m-auto flex p-2  hover:bg-red-800">{submit ? "Submitting..." : "Submit"}</button>
+              </form>
+            </div>
           </div>
         </section>
       </main>

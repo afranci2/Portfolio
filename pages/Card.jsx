@@ -127,7 +127,7 @@ const Card = (props) => {
             <div className="px-8 card cursor-pointer text-white rounded-lg bg-black/40 w-full h-full absolute justify-center align-center flex flex-col z-40 text-center">
               <h2 className="rounded-lg font-bold text-4xl">{props.title}</h2>
               <button
-                className="py-1 text-sm font-bold text-teal-400 rounded-lg"
+                className="py-1 text-sm font-bold text-yellow-400 rounded-lg"
                 onClick={toggleDetails}
               >
                 {props.progress}
