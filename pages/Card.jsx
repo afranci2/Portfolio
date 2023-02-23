@@ -5,20 +5,27 @@ import { AiFillCloseCircle } from "react-icons/ai";
 
 const Card = (props) => {
   const [showDetails, setShowDetails] = useState(false);
+  const [showDetails2, setShowDetails2] = useState(false);
+
   const [click, setClick] = useState(false);
+  const [click2, setClick2] = useState(false);
+
+  const toggleDetails2 = () => {
+    setShowDetails2(!showDetails2);
+  };
 
   const toggleDetails = () => {
     setShowDetails(!showDetails);
   };
 
   function clickHandler() {
-    setClick(true);
+    setClick(!click);
 
     console.log("het");
   }
 
   function clickHandler2() {
-    setClick(!click);
+    setClick2(click2);
 
     console.log("het");
   }
@@ -27,17 +34,19 @@ const Card = (props) => {
     <div className="rounded-lg transition ease-in-out basis-1/3 flex-1 relative">
       {" "}
       {click && (
-        <div className="border-2  overflow-auto shadow-2xl rounded-lg bg-white/100 w-11/12 h-5/6 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="border-2  overflow-auto shadow-2xl rounded-lg bg-white/100 w-11/12 h-5/6 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-8/12">
           <div className="flex space-between">
-            <div className="mr-4 w-10/12 py-12 m-auto md:flex md:py-14 md:px-16 md:ml-0 md:w-auto space-between content text-black">
+            <div className="mr-8 w-10/12 py-12 m-auto md:flex md:py-14 md:px-16 md:ml-0 md:w-auto space-between content text-black">
               {" "}
               <div className="basis-1/3 flex-1 text pr-10">
-                <p className="font-bold text-4xl">Monte Sinai</p>
-                <p className="font-regular pt-1">Full Stack</p>
-                <p className="font-regular text-xs text-red-500">IN PROGRESS</p>
+                <p className="font-bold text-4xl">{props.title}</p>
+                <p className="font-regular pt-1">{props.shortstack}</p>
+                <p className="font-regular text-xs text-red-500">
+                  {props.progress}
+                </p>
 
                 <p className="font-regular text-sm py-4">{props.description}</p>
-                <p className="font-bold text-sm text-teal-00 pt-4">
+                <p className="font-bold text-sm text-teal-00 pt-4 text-teal-400 ">
                   Link to project
                 </p>
                 <a href={`https://${props.link}`}>
@@ -65,24 +74,43 @@ const Card = (props) => {
                 <p className="font-bold text-sm text-teal-400  pt-4">
                   Optimizations
                 </p>
-                <p className="font-regular text-sm">{props.optimizations}</p>
+                <p className="font-regular text-sm pb-6">
+                  {props.optimizations}
+                </p>
               </div>
-              <div className="basis-1/3 flex-1 picture">
-                <Image
-                  className="object-cover"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={props.image}
-                  alt="Wef"
-                />
+              <div className="cursor-pointer basis-1/3 h-full flex-1">
+                {props.video && (
+                  <div>
+                    {" "}
+                    <video
+                      loop
+                      autoPlay={true}
+                      muted
+                      type="video/mp4"
+                      src={props.video}
+                    />{" "}
+                  </div>
+                )}
+                {props.images.map((image) => {
+                  return (
+                    <a href={image.src} target={"_blank"}>
+                      <img
+                        className={`shadow-md border-2 h-full my-6 rounded-lg object-cover ${
+                          showDetails2 ? "transition ease-in-out  blur-md" : ""
+                        }`}
+                        src={image.src}
+                        alt="project images"
+                      />
+                    </a>
+                  );
+                })}
               </div>
             </div>
-            <div className="button absolute right-0 p-5">
+            <div className="button  right-0 p-8 z-50 fixed top-0">
               <AiFillCloseCircle
                 color={"000"}
                 size={27}
-                onClick={clickHandler2}
+                onClick={clickHandler}
               />
             </div>
           </div>
@@ -98,12 +126,12 @@ const Card = (props) => {
           <div className="rounded-lg">
             <div className="px-8 card cursor-pointer text-white rounded-lg bg-black/40 w-full h-full absolute justify-center align-center flex flex-col z-40 text-center">
               <h2 className="rounded-lg font-bold text-4xl">{props.title}</h2>
-                <button
-                  className="py-1 text-sm font-bold text-teal-400 rounded-lg"
-                  onClick={toggleDetails}
-                >
-                  IN PROGRESS
-                </button>
+              <button
+                className="py-1 text-sm font-bold text-teal-400 rounded-lg"
+                onClick={toggleDetails}
+              >
+                {props.progress}
+              </button>
               <p className="py-4">{props.shortdescription}</p>
 
               <p className="font-bold text-sm pt-4 rounded-lg">
@@ -119,8 +147,8 @@ const Card = (props) => {
           width={"100%"}
           height={"100%"}
           layout="responsive"
-          src={props.image}
-          alt="Wef"
+          src={props.images[0]}
+          alt="First image"
         />
       </div>
     </div>

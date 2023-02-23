@@ -18,6 +18,12 @@ import web7 from "../public/My project-1 (11) (1).png";
 import Card from './Card'
 import DarkLogo from '../public/darklogo.png'
 import MonteImage1 from '../public/monte1.png'
+import MonteImage2 from '../public/monte2.png'
+import MonteImage3 from '../public/monte3.png'
+import PixelBloom1 from '../public/pixelbloom1.png'
+import PixelBloom2 from '../public/pixelbloom2.png'
+
+const Rose = "https://monte-assets.s3.amazonaws.com/video/Screen_Recording_2023-02-06_at_12_51_03_PM_AdobeExpress.mp4"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,6 +32,78 @@ export default function Home() {
   const toggleDetails = () => {
     setShowDetails(!showDetails);
   };
+
+  const PortfolioAssets = [
+    {
+      title: "Monte Sinai",
+      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      description: "This website is for a non profit religious organization with locations around the globe. It allows visitors to find different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
+      link:"www.elmontesinai.org",
+      link2:"www.github.com/afranci2/monteweb",
+      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      stack: "Client: HTML, CSS, Javascript, TypeScript, React, NextJS, TailwindCSS, POSTCSS Javascript, Node, Express",
+      optimizations: "Animations: add animation similar to https://www.revolut.com/en-US/ when hovering over cards",
+      images:[MonteImage1,MonteImage2,MonteImage3],
+      progress:"IN PROGRESS",
+      shortstack:"Full Stack"
+    },
+    {
+      title: "Pixel-Bloom",
+      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
+      link:"www.pixel-bloom.com",
+      link2:"www.github.com/afranci2/pixelbloom",
+      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      stack: "Front End:wf",
+      optimizations: "Wefwef",
+      images:[PixelBloom1, PixelBloom2],
+      progress: "COMPLETED",
+      shortstack:"Front-End/Full"
+
+    },
+    {
+      title: "CreateMyEssay",
+      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
+      link:"www.github.com/afranci2/monteweb",
+      link2:"www.elmontesinai.org",
+      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      stack: "Front End:wf",
+      optimizations: "Wefwef",
+      images:[MonteImage1,MonteImage2,MonteImage3],
+      progress: "COMPLETED",
+      shortstack:"Full Stack",
+    },
+    {
+      title: "Rose-In-A-Bottle",
+      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
+      link:"www.github.com/afranci2/monteweb",
+      link2:"www.elmontesinai.org",
+      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      stack: "Front End:wf",
+      optimizations: "Wefwef",
+      images:[MonteImage1,MonteImage2,MonteImage3],
+      progress: "COMPLETED",
+      shortstack:"Full Stack",
+      video:Rose
+    },
+    {
+      title: "Medical Preparatory Academy of Rhode Island",
+      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
+      link:"www.github.com/afranci2/monteweb",
+      link2:"www.elmontesinai.org",
+      features:"Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      stack: "Front End:wf",
+      optimizations: "Wefwef",
+      images:[MonteImage1,MonteImage2,MonteImage3],
+      progress: "COMING SOON",
+      shortstack:"Full Stack",
+      video:Rose
+    },
+
+  ]
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -172,17 +250,9 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-
-            <Card image={web1} title="MonteSinai" shortdescription="Website for non profit religious organizations for visitors to
-                  track different churches around the globe" description="Website for non profit religious organizations for visitors to
-                  track different churches around the globe, learn about the
-                  organization, watch sermons and live streams, donate, and
-                  more. Made in React with Tailwind and Node and Express and
-                  Next js. Link to project: www.elmontesinai.org" link="www.elmontesinai.org" link2="www.github.com/afranci2/monteweb" features="Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard" />
-            <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
-            <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
-            <Card image={web1} title="gwrggwergwerg" description="wefWEF" />
-
+            {PortfolioAssets.map((project)=>{
+              return (<Card video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={MonteImage1} images={project.images} link={project.link} link2={project.link2} description={project.description} shortDescription={project.shortDescription} features={project.features} stack={project.stack}></Card>)
+            })}
           </div>
         </section>
       </main>
