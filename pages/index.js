@@ -297,7 +297,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             {PortfolioAssets.map((project,index) => {
-              return (<Card key={project.id} shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={MonteImage1} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
+              return (<Card key={project.id} shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={project.images[0]} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
             })}
           </div>
         </section>

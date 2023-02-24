@@ -10,9 +10,6 @@ const Card = (props) => {
   const [click, setClick] = useState(false);
   const [click2, setClick2] = useState(false);
 
-  const toggleDetails2 = () => {
-    setShowDetails2(!showDetails2);
-  };
 
   const toggleDetails = () => {
     setShowDetails(!showDetails);
@@ -24,11 +21,6 @@ const Card = (props) => {
     console.log("het");
   }
 
-  function clickHandler2() {
-    setClick2(click2);
-
-    console.log("het");
-  }
 
   return (
     <div className="rounded-lg transition ease-in-out basis-1/3 flex-1 relative">
@@ -86,7 +78,6 @@ const Card = (props) => {
                       loop
                       autoPlay={true}
                       muted
-                      type="video/mp4"
                       src={props.video}
                     />{" "}
                   </div>
@@ -146,7 +137,7 @@ const Card = (props) => {
           width={"100%"}
           height={"100%"}
           layout="responsive"
-          src={props.images[0]}
+          src={props.image}
           alt="First image"
         />
       </div>
