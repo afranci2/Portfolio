@@ -175,7 +175,7 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-red-800 text- to-red-700 text-white px-4 py-2 border-none rounded-md ml-8 dark:bg-gradient-to-r dark:from-cyan-500 text- dark:to-teal-500"
-                  href="https://monte-assets.s3.amazonaws.com/other/Resume.pdf"
+                  href="https://monte-assets.s3.amazonaws.com/other/Resume+(1).pdf"
                 >
                   Resume
                 </a>
