@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio Page
 
-## Getting Started
+This portfolio displays my skills, projects, experience, and more. This was made with Next.js, React.js, and Tailwind.
+  
+Link to live app: https://www.anthonydevelop.com
 
-First, run the development server:
+## Screenshots
+<img width="1428" alt="Screenshot 2023-02-24 at 1 30 31 PM" src="https://user-images.githubusercontent.com/108776240/221261517-8be9b7ac-3e58-4311-891f-92d9b96ffeca.png">
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<img width="1430" alt="Screenshot 2023-02-24 at 1 31 12 PM" src="https://user-images.githubusercontent.com/108776240/221261535-4da52b6e-5407-4e0a-8ab4-8daf5082713b.png">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Client:** Next.js, React.js, and Tailwind
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Optimizations
 
-To learn more about Next.js, take a look at the following resources:
+Animations: Add animations (similar to https://www.revolut.com/en-US/) when hovering over cards and other compoinents
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lessons Learned
+Add functionality to pull info from github repos rather than making static information
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.anthonydevelop.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anthony-francisco-354728226/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/a_franci2)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Examples
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Look at some of my other projects
+
+CreateMyEssay - createmyessay.com
