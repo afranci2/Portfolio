@@ -26,7 +26,6 @@ import CreateMyEssay4 from '../public/createmyessay4.png'
 import RoseInABottle1 from '../public/roseinabottle1.png'
 import RoseInABottle2 from '../public/roseinabottle2.png'
 const Rose = "https://monte-assets.s3.amazonaws.com/video/Screen_Recording_2023-02-06_at_12_51_03_PM_AdobeExpress.mp4"
-
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [submit, setSubmit] = useState(false)
