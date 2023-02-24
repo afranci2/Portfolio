@@ -16,6 +16,9 @@ import MonteImage2 from '../public/monte2.png'
 import MonteImage3 from '../public/monte3.png'
 import PixelBloom1 from '../public/pixelbloom1.png'
 import PixelBloom2 from '../public/pixelbloom2.png'
+import PixelBloom3 from '../public/pixelbloom3.png'
+import PixelBloom4 from '../public/pixelbloom4.png'
+
 
 
 import CreateMyEssay1 from '../public/createmyessay1.png'
@@ -113,7 +116,7 @@ export default function Home() {
       features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images: [PixelBloom1, PixelBloom2],
+      images: [PixelBloom1, PixelBloom2,PixelBloom3,PixelBloom4],
       progress: "COMPLETED",
       shortstack: "Front-End/Full"
 
