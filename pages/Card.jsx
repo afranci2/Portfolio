@@ -1,5 +1,5 @@
-"use client"
-import React,{ useState } from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { AiFillCloseCircle } from "react-icons/ai";
 
@@ -10,7 +10,6 @@ const Card = (props) => {
   const [click, setClick] = useState(false);
   const [click2, setClick2] = useState(false);
 
-
   const toggleDetails = () => {
     setShowDetails(!showDetails);
   };
@@ -20,7 +19,6 @@ const Card = (props) => {
 
     console.log("het");
   }
-
 
   return (
     <div className="rounded-lg transition ease-in-out basis-1/3 flex-1 relative">
@@ -38,11 +36,20 @@ const Card = (props) => {
                 </p>
 
                 <p className="font-regular text-sm py-4">{props.description}</p>
+                {props.algorithms && (
+                  <div>
+                    {" "}
+                    <p className="font-bold text-sm text-teal-400  pt-4">
+                      Algorithms/API
+                    </p>
+                    <p className="font-regular text-sm">{props.algorithms}</p>
+                  </div>
+                )}
                 <p className="font-bold text-sm text-teal-00 pt-4 text-teal-400 ">
-                  Link to project
+                  Link to Project
                 </p>
                 <a href={`https://${props.link}`}>
-                  <p className="font-semibold text-sm pt-1">Live Site: </p>
+                  <p className="font-semibold text-sm pt-1">Live App: </p>
 
                   <p className="font-regular text-sm underline">{props.link}</p>
                 </a>
@@ -74,12 +81,7 @@ const Card = (props) => {
                 {props.video && (
                   <div className="overflow-hidden rounded-lg mb-6">
                     {" "}
-                    <video
-                      loop
-                      autoPlay={true}
-                      muted
-                      src={props.video}
-                    />{" "}
+                    <video loop autoPlay={true} muted src={props.video} />{" "}
                   </div>
                 )}
                 {props.images.map((image, index) => {

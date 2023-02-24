@@ -19,8 +19,6 @@ import PixelBloom2 from '../public/pixelbloom2.png'
 import PixelBloom3 from '../public/pixelbloom3.png'
 import PixelBloom4 from '../public/pixelbloom4.png'
 
-
-
 import CreateMyEssay1 from '../public/createmyessay1.png'
 import CreateMyEssay2 from '../public/createmyessay2.png'
 import CreateMyEssay3 from '../public/createmyessay3.png'
@@ -79,52 +77,53 @@ export default function Home() {
 
   const PortfolioAssets = [
     {
-      id:0,
+      id: 0,
       title: "Monte Sinai",
-      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
-      description: "This website is for a non profit religious organization with locations around the globe. It allows visitors to find different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link: "www.elmontesinai.org",
+      shortDescription: "Full stack web app built with Next.js, React.js, Node.js, Express.js, Tailwind, and MongoDB",
+      description: "Originally a static site for non-profit organization, this full stack web app allows visitors to learn and interact with the organization. Complete with admin dashboard for easy site maintenance.",
+      link: "www.monte-web.vercel.app",
       link2: "www.github.com/afranci2/monteweb",
       features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
-      stack: "Client: HTML, CSS, Javascript, TypeScript, React, NextJS, TailwindCSS, POSTCSS Javascript, Node, Express",
-      optimizations: "Animations: add animation similar to https://www.revolut.com/en-US/ when hovering over cards",
+      stack: "HTML/CSS, Javascript, TypeScript, React.js, Next.js, TailwindCSS, POSTCSS, Node.js, Express.js, MongoDB",
+      optimizations: "Animations",
       images: [MonteImage1, MonteImage2, MonteImage3],
       progress: "IN PROGRESS",
       shortstack: "Full Stack"
     },
     {
-      id:1,
+      id: 1,
       title: "CreateMyEssay",
-      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
-      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link: "www.github.com/afranci2/monteweb",
-      link2: "www.elmontesinai.org",
-      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
-      stack: "Front End:wf",
-      optimizations: "Wefwef",
+      shortDescription: "Full-Stack SASS MVP writing assistant built with Express.js, Node.js, and OpenAI API",
+      algorithms: "An outline is first requested based on the assignment. A linear search algorithm converts the Roman numerals of the outline into sections by numbers. Another algorithm developed requests text completion in chunks based on the previous algorithm. The algorithm uses a loop of fetch requests to generate essay sections based on the number of sections determined by the previous algorithm.",
+      description: "Got writer's block? Need a writing assistant? Try CreateMyEssay! Just type in a prompt or assignment and get a unique response. This SASS tool can create an outline, title, and essay for you using OpenAI API. Use additional parameters to further refine the tone and style.",
+      link: "www.createmyessay.com",
+      link2: "www.github.com/afranci2/essaymaker",
+      features: "Linear Search Algorithm, OpenAI API, Query Generation Algorithm, Text Generation Parameters (Tone, Style, Format, Citations)",
+      stack: "Node.js, Express.js, OpenAI API",
+      optimizations: "Add complete full-stack functionality with login/signup and payment option. Move algorithms into server side",
       images: [CreateMyEssay1, CreateMyEssay2, CreateMyEssay3, CreateMyEssay4],
       progress: "COMPLETED",
       shortstack: "Full Stack",
     },
-    {      
-      id:2,
+    {
+      id: 2,
       title: "PixelBloom",
-      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      shortDescription: "SASS MVP UI design generator built with React.js and OpenAI API",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
       link: "www.pixel-bloom.com",
       link2: "www.github.com/afranci2/pixelbloom",
       features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
-      stack: "Front End:wf",
+      stack: "Front End",
       optimizations: "Wefwef",
-      images: [PixelBloom1, PixelBloom2,PixelBloom3,PixelBloom4],
+      images: [PixelBloom1, PixelBloom2, PixelBloom3, PixelBloom4],
       progress: "COMPLETED",
       shortstack: "Front-End/Full"
 
     },
     {
-      id:3,
+      id: 3,
       title: "RoseInABottle",
-      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      shortDescription: "E-commerce website design template built with React.js, Liquid, CSS/HTML",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
       link: "www.github.com/afranci2/monteweb",
       link2: "www.elmontesinai.org",
@@ -137,9 +136,9 @@ export default function Home() {
       video: Rose
     },
     {
-      id:4,
+      id: 4,
       title: "Medical Preparatory Academy of Rhode Island",
-      shortDescription: "Website for non profit religious organizations for visitors to track different churches around the globe",
+      shortDescription: "Full stack web app built with Next.js, React.js, Node.js, Express.js, Tailwind, and MySQL",
       description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
       link: "www.github.com/afranci2/monteweb",
       link2: "www.elmontesinai.org",
@@ -205,6 +204,7 @@ export default function Home() {
               <a href="https://github.com/afranci2" target="_blank">
                 <AiFillGithub />
               </a>
+
             </div>
             <div className="mx-auto bg-gradient-to-b from-red-700 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-96 md:w-96 dark:bg-gradient-to-b dark:to-teal-200 dark:from-teal-500">
               <Image src={deved} layout="fill" objectFit="cover" alt="Wef" />
@@ -217,25 +217,21 @@ export default function Home() {
               About Me
             </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              From the transition from Pre-Med path to Computer Science, I've
-              done work for non-profit organizations and collaborated with
-              talanted people to create digital products for both business and
-              personal use. With a passion for entrepreneuship and media, I am
-              focused on making practical digital solutions.
+            Hi! My name is Anthony. I am a passionate developer with experience creating digital solutions for both business and personal use, working with non-profit organizations and talented collaborators.
+
             </p>
+            
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I have experience with a wide range of programming languages,
-              frameworks, and tools.
+           I am committed to using technology to make a positive impact on the world. I am always eager to take on new challenges and continue learning.            </p>
+            <p className="text-md pb-2 leading-8 text-gray-800 dark:text-gray-200">
+            I have a diverse range of experience with programming languages, frameworks, and tools.
             </p>
           </div>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image src={code} width={100} height={100} alt="Wef" />
               <h3 className="text-lg font-medium pt-8 pb-2  ">Languages</h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
-              </p>
+
               <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Languages I Use</h4>
               <p className="text-gray-800 py-1">Javascript</p>
               <p className="text-gray-800 py-1">HTML/CSS</p>
@@ -247,10 +243,7 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image src={design} width={100} height={100} alt="Wef" />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Frameworks</h3>
-              <p className="py-2">
-                Do you have an idea for your next great website? Let's make it a
-                reality.
-              </p>
+
               <div>
                 <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Front End</h4>
                 <p className="text-gray-800 py-1">React.js</p>
@@ -271,10 +264,6 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image src={consulting} width={100} height={100} />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Tools</h3>
-              <p className="py-2">
-                Are you interested in feedback for your current project? I can
-                give you tips and tricks to level it up.
-              </p>
               <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Tools I Use</h4>
               <p className="text-gray-800 py-1">AWS</p>
               <p className="text-gray-800 py-1">Git</p>
@@ -285,33 +274,41 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="py-10">
           <div>
-            <h3 className="text-3xl font-semibold py-1 dark:text-white ">Projects</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Check out my projects, personal and professional! Projects ranging
-              from simple static sites to SASS tools!
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
-            </p>
+            <section className="py-8 flex justify-between text-black rounded-lg">
+              <div className="w-10/12">
+                <p className="text-3xl font-semibold">Projects</p>
+                <p className="pt-4 text-md py-2 leading-8 text-gray-800 dark:text-gray-200">Check out some of my projects, personal and professional! Projects ranging from simple static sites to SASS tools!
+
+           </p>
+
+              </div>
+              <a href="https://github.com/afranci2" target="_blank">
+                <AiFillGithub size={60} color={"000"} />
+              </a>
+            </section>
           </div>
 
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            {PortfolioAssets.map((project,index) => {
-              return (<Card key={project.id} shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={project.images[0]} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
+            {PortfolioAssets.map((project) => {
+              return (<Card algorithms={project.algorithms} key={project.id} shortDescription={project.shortDescription} video={project.video} optimizations={project.optimizations} shortstack={project.shortstack} progress={project.progress} title={project.title} image={project.images[0]} images={project.images} link={project.link} link2={project.link2} description={project.description} features={project.features} stack={project.stack}></Card>)
             })}
           </div>
         </section>
-        <section className="h-40 w-full">
+
+        <section className="py-20 w-full">
           <div className="w-10/12 m-auto border-2 py-12 p-4 shadow-2xl rounded-lg">
-            <div className="pb-8 flex gap-2 align-center m-auto justify-center">
+            <div className="mr-2 flex gap-2 align-center m-auto justify-center">
               <IoIosSend size={30} />
               <h1 className=" font-bold text-2xl">
                 Contact Me!
               </h1>
             </div>
+            <p className="justify-center flex pb-8 p-4 text-md">
+              Let's get started...
+            </p>
             <div className="m-auto bg-gradient-to-b from-red-700 rounded-full w-40 h-40 relative overflow-hidde md:h-46 md:w-46 dark:bg-gradient-to-b dark:to-teal-200 dark:from-teal-500">
               <Image src={deved} layout="fill" objectFit="cover" alt="Wef" />
             </div>
