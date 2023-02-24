@@ -28,7 +28,7 @@ const Card = (props) => {
           <div className="flex space-between">
             <div className=" w-10/12 py-12 m-auto lg:flex md:py-14 md:px-16 md:ml-0 md:w-auto space-between content text-black">
               {" "}
-              <div className="w-1/2 break-words  basis-1/3 flex-1 text pr-20">
+              <div className="w-1/2   basis-1/3 flex-1 text pr-20">
                 <p className="font-bold text-4xl">{props.title}</p>
                 <p className="font-regular pt-1">{props.shortstack}</p>
                 <p className="font-regular text-xs text-red-500">

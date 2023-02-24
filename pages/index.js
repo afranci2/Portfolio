@@ -16,9 +16,10 @@ import MonteImage2 from '../public/monte2.png'
 import MonteImage3 from '../public/monte3.png'
 import PixelBloom1 from '../public/pixelbloom1.png'
 import PixelBloom2 from '../public/pixelbloom2.png'
-import PixelBloom3 from '../public/pixelbloom3.png'
-import PixelBloom4 from '../public/pixelbloom4.png'
-
+import PixelBloom3 from '../public/pixelbloomtry.png'
+import PixelBloom4 from '../public/pixelbloomtry2.png'
+import MedPrep1 from '../public/medprep1.png'
+import MedPrep2 from '../public/medprep2.png'
 import CreateMyEssay1 from '../public/createmyessay1.png'
 import CreateMyEssay2 from '../public/createmyessay2.png'
 import CreateMyEssay3 from '../public/createmyessay3.png'
@@ -80,7 +81,7 @@ export default function Home() {
       id: 0,
       title: "Monte Sinai",
       shortDescription: "Full stack web app built with Next.js, React.js, Node.js, Express.js, Tailwind, and MongoDB",
-      description: "Originally a static site for non-profit organization, this full stack web app allows visitors to learn and interact with the organization. Complete with admin dashboard for easy site maintenance.",
+      description: "Originally a static site for non-profit organization, this full stack web app allows visitors to learn and interact with the organization. Complete with admin dashboard for easy site maintenance. View previous static site on Github.",
       link: "www.monte-web.vercel.app",
       link2: "www.github.com/afranci2/monteweb",
       features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
@@ -114,7 +115,7 @@ export default function Home() {
       link2: "www.github.com/afranci2/pixelbloom",
       features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End",
-      optimizations: "Wefwef",
+      optimizations: "SignUP/SignIN functionality",
       images: [PixelBloom1, PixelBloom2, PixelBloom3, PixelBloom4],
       progress: "COMPLETED",
       shortstack: "Front-End/Full"
@@ -124,12 +125,12 @@ export default function Home() {
       id: 3,
       title: "RoseInABottle",
       shortDescription: "E-commerce website design template built with React.js, Liquid, CSS/HTML",
-      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
+      description: "Custom Shopify e-commerce template made to replace Debutify powered theme. Improved page speed by 156% and website conversion by 2%. Integrated with Shopify plugins, payments, and functionality.",
       link: "www.github.com/afranci2/monteweb",
       link2: "www.elmontesinai.org",
-      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
-      stack: "Front End:wf",
-      optimizations: "Wefwef",
+      features: "Liquid HTML/CSS, Modular Components, Shopify Integration",
+      stack: "HTML/CSS, Liquid, Shopify",
+      optimizations: "Add support for additional plugins and product pages",
       images: [RoseInABottle1, RoseInABottle2],
       progress: "COMPLETED",
       shortstack: "Full Stack",
@@ -139,16 +140,15 @@ export default function Home() {
       id: 4,
       title: "Medical Preparatory Academy of Rhode Island",
       shortDescription: "Full stack web app built with Next.js, React.js, Node.js, Express.js, Tailwind, and MySQL",
-      description: "Website for non profit religious organizations for visitors to track different churches around the globe, learn about the organization, watch sermons and live streams, donate, andmore. Made in React with Tailwind and Node and Express and Next js.",
-      link: "www.github.com/afranci2/monteweb",
-      link2: "www.elmontesinai.org",
+      description: "Full stack web app for charter school. Design and functionality similar to charter schools in near geographic area. Currently, creating team of designers and developers. Production begins October 2022.",
+      link: "N/A",
+      link2: "N/A",
       features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "Front End:wf",
       optimizations: "Wefwef",
-      images: [MonteImage1, MonteImage2, MonteImage3],
+      images: [MedPrep1, MedPrep2],
       progress: "COMING SOON",
       shortstack: "Full Stack",
-      video: Rose
     },
 
   ]
