@@ -143,7 +143,7 @@ export default function Home() {
       description: "Full stack web app for charter school. Design and functionality similar to charter schools in near geographic area. Currently, creating team of designers and developers. Production begins October 2022.",
       link: "N/A",
       link2: "N/A",
-      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      features: "Interactive Events/Blog, Admin Dashboard",
       stack: "React.js, Tailwind, Next.js, Node.js, Express.js, MySQL",
       optimizations: "",
       images: [MedPrep1, MedPrep2],
