@@ -132,7 +132,7 @@ export default function Home() {
       stack: "HTML/CSS, Liquid, Shopify",
       optimizations: "Add support for additional plugins and product pages",
       images: [RoseInABottle1, RoseInABottle2],
-      progress: "COMPLETED",
+      progress: "Coming Soon",
       shortstack: "Full Stack",
       video: Rose
     },
