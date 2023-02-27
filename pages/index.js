@@ -194,6 +194,9 @@ export default function Home() {
               Software engineer for the web and more. Join me down below and
               let's get started!
             </p>
+            <p className="text-sm pb-8 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xs">
+              Visuals made with Pixel-Bloom. See below!
+            </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <a
                 href="https://www.linkedin.com/in/anthony-francisco-354728226/"
@@ -206,9 +209,11 @@ export default function Home() {
               </a>
 
             </div>
+            
             <div className="mx-auto bg-gradient-to-b from-red-700 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-96 md:w-96 dark:bg-gradient-to-b dark:to-teal-200 dark:from-teal-500">
               <Image src={deved} layout="fill" objectFit="cover" alt="Wef" />
             </div>
+
           </div>
         </section>
         <section>
@@ -217,14 +222,14 @@ export default function Home() {
               About Me
             </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-            Hi! My name is Anthony. I am a passionate developer with experience creating digital solutions for both business and personal use, working with non-profit organizations and talented collaborators.
+              Hi! My name is Anthony. I am a passionate developer with experience creating digital solutions for both business and personal use, working with non-profit organizations and talented collaborators.
 
             </p>
-            
+
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-           I am committed to using technology to make a positive impact on the world. I am always eager to take on new challenges and continue learning.            </p>
+              I am committed to using technology to make a positive impact on the world. I am always eager to take on new challenges and continue learning.            </p>
             <p className="text-md pb-2 leading-8 text-gray-800 dark:text-gray-200">
-            I have a diverse range of experience with programming languages, frameworks, and tools.
+              I have a diverse range of experience with programming languages, frameworks, and tools.
             </p>
           </div>
           <div className="lg:flex gap-10">
@@ -282,7 +287,7 @@ export default function Home() {
                 <p className="text-3xl font-semibold">Projects</p>
                 <p className="pt-4 text-md py-2 leading-8 text-gray-800 dark:text-gray-200">Check out some of my projects, personal and professional! Projects ranging from simple static sites to SASS tools!
 
-           </p>
+                </p>
 
               </div>
               <a href="https://github.com/afranci2" target="_blank">
