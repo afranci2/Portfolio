@@ -194,9 +194,6 @@ export default function Home() {
               Software engineer for the web and more. Join me down below and
               let's get started!
             </p>
-            <p className="text-sm pb-8 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xs">
-              Visuals made with Pixel-Bloom. See below!
-            </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
               <a
                 href="https://www.linkedin.com/in/anthony-francisco-354728226/"
@@ -213,7 +210,9 @@ export default function Home() {
             <div className="mx-auto bg-gradient-to-b from-red-700 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-96 md:w-96 dark:bg-gradient-to-b dark:to-teal-200 dark:from-teal-500">
               <Image src={deved} layout="fill" objectFit="cover" alt="Wef" />
             </div>
-
+            <p className="text-sm p-6 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xs">
+              Visuals made with my project PixelBloom!
+            </p>
           </div>
         </section>
         <section>
