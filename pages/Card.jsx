@@ -134,7 +134,7 @@ const Card = (props) => {
         )}
         <Image
           className={`rounded-lg object-cover ${
-            showDetails ? "transition ease-in-out  blur-md" : ""
+            showDetails ? "transition ease-in-out blur-md" : ""
           }`}
           width={"100%"}
           height={"100%"}
