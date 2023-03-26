@@ -82,7 +82,7 @@ export default function Home() {
       title: "Monte Sinai",
       shortDescription: "Full stack web app built with Next.js, React.js, Node.js, Express.js, Tailwind, and MongoDB",
       description: "Originally a static site for non-profit organization, this full stack web app allows visitors to learn and interact with the organization. Complete with admin dashboard for easy site maintenance. View previous static site on Github.",
-      link: "www.monte-web.vercel.app",
+      link: "www.monte-web-afranci2.vercel.app/",
       link2: "www.github.com/afranci2/monteweb",
       features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "HTML/CSS, Javascript, TypeScript, React.js, Next.js, TailwindCSS, POSTCSS, Node.js, Express.js, MongoDB",
