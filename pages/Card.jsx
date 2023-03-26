@@ -48,7 +48,7 @@ const Card = (props) => {
                 <p className="font-bold text-sm text-teal-00 pt-4 text-teal-400 ">
                   Link to Project
                 </p>
-                <a href={`https://${props.link}`}>
+                <a href={`https://monte-web-afranci2.vercel.app/`}>
                   <p className="font-semibold text-sm pt-1">Live App: </p>
 
                   <p className="font-regular text-sm underline">{props.link}</p>
