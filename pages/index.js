@@ -261,7 +261,7 @@ export default function Home() {
                   <p className="text-gray-800 py-1">Express.js</p>
                   <p className="text-gray-800 py-1">Next.js</p>
                   <p className="text-gray-800 py-1">MongoDB</p>
-                  <p className="text-gray-800 py-1">MySQL</p>
+                  <p className="text-gray-800 py-1">SQL</p>
                 </div>
               </div>
             </div>
