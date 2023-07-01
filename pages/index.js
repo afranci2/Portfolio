@@ -88,7 +88,7 @@ export default function Home() {
       stack: "HTML/CSS, Javascript, TypeScript, React.js, Next.js, TailwindCSS, POSTCSS, Node.js, Express.js, MongoDB",
       optimizations: "Animations",
       images: [MonteImage1, MonteImage2, MonteImage3],
-      progress: "IN PROGRESS",
+      progress: "COMPLETED",
       shortstack: "Full Stack"
     },
     {
@@ -237,11 +237,14 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-8 pb-2  ">Languages</h3>
 
               <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Languages I Use</h4>
+              <p className="text-gray-800 py-1">Python</p>
+              <p className="text-gray-800 py-1">C/C++</p>
+              <p className="text-gray-800 py-1">SQL</p>
+
               <p className="text-gray-800 py-1">Javascript</p>
               <p className="text-gray-800 py-1">HTML/CSS</p>
+
               <p className="text-gray-800 py-1">TypeScript</p>
-              <p className="text-gray-800 py-1">Python</p>
-              <p className="text-gray-800 py-1">Java</p>
               <p className="text-gray-800 py-1">Liquid</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
@@ -250,18 +253,17 @@ export default function Home() {
 
               <div>
                 <h4 className="py-4 text-red-700 font-medium dark:text-teal-400">Front End</h4>
-                <p className="text-gray-800 py-1">React.js</p>
+                <p className="text-gray-800 py-1">React</p>
                 <p className="text-gray-800 py-1">Tailwind</p>
-                <p className="text-gray-800 py-1">Bootstrap</p>
                 <div>
                   <h4 className="py-4 pt-8 text-red-700 font-medium dark:text-teal-400">
                     Back End
                   </h4>
-                  <p className="text-gray-800 py-1">Node.js</p>
-                  <p className="text-gray-800 py-1">Express.js</p>
-                  <p className="text-gray-800 py-1">Next.js</p>
+                  <p className="text-gray-800 py-1">Node</p>
+                  <p className="text-gray-800 py-1">Express</p>
+                  <p className="text-gray-800 py-1">Next</p>
                   <p className="text-gray-800 py-1">MongoDB</p>
-                  <p className="text-gray-800 py-1">SQL</p>
+                  <p className="text-gray-800 py-1">mySQL</p>
                 </div>
               </div>
             </div>
@@ -274,7 +276,6 @@ export default function Home() {
               <p className="text-gray-800 py-1">Adobe Suite</p>
               <p className="text-gray-800 py-1">Vercel</p>
               <p className="text-gray-800 py-1">Netlify</p>
-              <p className="text-gray-800 py-1">Shopify</p>
             </div>
           </div>
         </section>
