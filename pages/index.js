@@ -84,7 +84,7 @@ export default function Home() {
       description: "Originally a static site for non-profit organization, this full stack web app allows visitors to learn and interact with the organization. Complete with admin dashboard for easy site maintenance. View previous static site on Github.",
       link: "monte-web-afranci2.vercel.app/",
       link2: "github.com/afranci2/monteweb",
-      features: "Facebook Live API, Stripe/Tithe.Ly Payment Processing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
+      features: "Facebook Live API, Stripe/Tithe.Ly PaymentgitProcessing, Volunteer Sign up Applications, Testimonial Upload, Social Media Integration, Admin Dashboard",
       stack: "HTML/CSS, Javascript, TypeScript, React.js, Next.js, TailwindCSS, POSTCSS, Node.js, Express.js, MongoDB",
       optimizations: "Animations",
       images: [MonteImage1, MonteImage2, MonteImage3],
